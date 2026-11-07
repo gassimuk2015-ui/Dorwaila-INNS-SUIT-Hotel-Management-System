@@ -420,5 +420,8 @@ def audit_logs(db: Db, admin: AdminUser, limit: int = 100):
          "action": entry.action, "target_type": entry.target_type, "target_id": entry.target_id,
          "details": entry.details, "created_at": entry.created_at}
         for entry in entries
+        @app.get("/")
+        def root():
+            return {"message":"Dorwaila Inns & Suite Hotel Management API is running"}
     ]
 
